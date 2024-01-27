@@ -1,0 +1,10 @@
+{
+    "summary": "The code attempts to interact with various applications using the win32com.client library, facing difficulties due to large registry size and unavailable objects. It finally succeeds in obtaining a working object for Excel. The code prints the directory of the obtained object and ends with frustration and confusion about the process.",
+    "details": [
+        {
+            "comment": "The code attempts to interact with various applications using the win32com.client library, facing difficulties due to large registry size and unavailable objects. It finally succeeds in obtaining a working object for Excel. The code prints the directory of the obtained object and ends with frustration and confusion about the process.",
+            "location": "\"/media/root/Prima/works/generated_docs/autowork_doc/src/exp0.py\":0-26",
+            "content": "import win32com.client\n# filename = \"D:\\\\Program Files (x86)\\\\Image-Line\\\\FL Studio 20\\\\FL64.Application\"\n# wb1 = win32com.client.GetActiveObject(\"Illustrator.Application\")\n# wb1 = win32com.client.GetActiveObject(\"Photoshop.Application\")\n# wb1 = win32com.client.GetActiveObject(\"FL Studio\")\n# fuck.\n# find avaliable in HKEY_CLASSES_ROOT.\n# the registry is way too fucking huge.\n# all we need is the fucking name.\n# fuck these people.\n# it works.\n# how about SAI?\n# someone provided a solution.\n# just what the hell?\n# fuck.\n# wb1 = win32com.client.GetActiveObject(\"Excel.Application\")\n# well this works.\n# no other shoits?\n# wb1 = win32com.client.GetActiveObject(filename)\n# wb1 = win32com.client.GetActiveObject(\"Excel.Application\")\n# what is this fuck?\n# only for 32bits?\n# hope this works.\nprint(dir(wb1))\n# this works.\n# the fuck is fucked.\n# what the fuck?"
+        }
+    ]
+}

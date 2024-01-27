@@ -1,0 +1,10 @@
+{
+    "summary": "This code imports the dill module, defines a function to return a list from a file named \"newFuckingDill.dill\", and another function that returns a list based on a provided filename.",
+    "details": [
+        {
+            "comment": "This code imports the dill module, defines a function to return a list from a file named \"newFuckingDill.dill\", and another function that returns a list based on a provided filename.",
+            "location": "\"/media/root/Prima/works/generated_docs/autowork_doc/src/getFromDill.py\":0-4",
+            "content": "import dill as pickle\ndef returnAList():\n    return pickle.load(open(\"newFuckingDill.dill\",\"rb\"))\ndef returnXList(b):\n    return pickle.load(open(b+\".dill\",\"rb\"))"
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "0": {
+        "file_id": 0,
+        "content": "/README",
+        "type": "filepath"
+    },
+    "1": {
+        "file_id": 0,
+        "content": "This code appears to be a rough draft or outline for a document discussing various methods of automating video production processes using Adobe scripts, DAW scripts, and UI automation. The author emphasizes the importance of having proof and overcoming obstacles in the process.",
+        "type": "summary"
+    },
+    "2": {
+        "file_id": 0,
+        "content": "We have found some ways to automate the entire process of video production.\nThe script.\nAdobe scripts, DAW scripts, and the universal one -> UI automation, even system level modification.\nAll about the stuff that we have learned so far.\nThus it would be way too simple to do the stuff.\nJust jump right in, feel the shit inside.\nThere is no way that we can do it without the proof.\nHuman throws shit on us, so we have to throw it back.\nEnd of talk.",
+        "type": "code",
+        "location": "/README:1-9"
+    },
+    "3": {
+        "file_id": 0,
+        "content": "This code appears to be a rough draft or outline for a document discussing various methods of automating video production processes using Adobe scripts, DAW scripts, and UI automation. The author emphasizes the importance of having proof and overcoming obstacles in the process.",
+        "type": "comment"
+    },
+    "4": {
+        "file_id": 1,
+        "content": "/exp0.py",
+        "type": "filepath"
+    },
+    "5": {
+        "file_id": 1,
+        "content": "The code attempts to interact with various applications using the win32com.client library, facing difficulties due to large registry size and unavailable objects. It finally succeeds in obtaining a working object for Excel. The code prints the directory of the obtained object and ends with frustration and confusion about the process.",
+        "type": "summary"
+    },
+    "6": {
+        "file_id": 1,
+        "content": "import win32com.client\n# filename = \"D:\\\\Program Files (x86)\\\\Image-Line\\\\FL Studio 20\\\\FL64.Application\"\n# wb1 = win32com.client.GetActiveObject(\"Illustrator.Application\")\n# wb1 = win32com.client.GetActiveObject(\"Photoshop.Application\")\n# wb1 = win32com.client.GetActiveObject(\"FL Studio\")\n# fuck.\n# find avaliable in HKEY_CLASSES_ROOT.\n# the registry is way too fucking huge.\n# all we need is the fucking name.\n# fuck these people.\n# it works.\n# how about SAI?\n# someone provided a solution.\n# just what the hell?\n# fuck.\n# wb1 = win32com.client.GetActiveObject(\"Excel.Application\")\n# well this works.\n# no other shoits?\n# wb1 = win32com.client.GetActiveObject(filename)\n# wb1 = win32com.client.GetActiveObject(\"Excel.Application\")\n# what is this fuck?\n# only for 32bits?\n# hope this works.\nprint(dir(wb1))\n# this works.\n# the fuck is fucked.\n# what the fuck?",
+        "type": "code",
+        "location": "/exp0.py:1-27"
+    },
+    "7": {
+        "file_id": 1,
+        "content": "The code attempts to interact with various applications using the win32com.client library, facing difficulties due to large registry size and unavailable objects. It finally succeeds in obtaining a working object for Excel. The code prints the directory of the obtained object and ends with frustration and confusion about the process.",
+        "type": "comment"
+    },
+    "8": {
+        "file_id": 2,
+        "content": "/getFromDill.py",
+        "type": "filepath"
+    },
+    "9": {
+        "file_id": 2,
+        "content": "This code imports the dill module, defines a function to return a list from a file named \"newFuckingDill.dill\", and another function that returns a list based on a provided filename.",
+        "type": "summary"
+    },
+    "10": {
+        "file_id": 2,
+        "content": "import dill as pickle\ndef returnAList():\n    return pickle.load(open(\"newFuckingDill.dill\",\"rb\"))\ndef returnXList(b):\n    return pickle.load(open(b+\".dill\",\"rb\"))",
+        "type": "code",
+        "location": "/getFromDill.py:1-5"
+    },
+    "11": {
+        "file_id": 2,
+        "content": "This code imports the dill module, defines a function to return a list from a file named \"newFuckingDill.dill\", and another function that returns a list based on a provided filename.",
+        "type": "comment"
+    },
+    "12": {
+        "file_id": 3,
+        "content": "/shrink.py",
+        "type": "filepath"
+    },
+    "13": {
+        "file_id": 3,
+        "content": "The code appears to be attempting to enumerate all subkeys under HKEY_CLASSES_ROOT in the Windows registry. It uses the `winreg` module and stores the results in a list, which is then passed to the `storeXList` function for further processing. The code also includes debugging prints and error handling for potential issues during enumeration. However, there are several comments expressing frustration or confusion, suggesting that the code may not be functioning as intended or expected.",
+        "type": "summary"
+    },
+    "14": {
+        "file_id": 3,
+        "content": "# all fucked up.\nimport winreg\n# is this for free?\nfrom storeADill import storeXList\ndef obtain():\n    # it always have to end.\n    # 获取该键的所有键值\n    deadCode = []\n    key = winreg.OpenKey(winreg.HKEY_CLASSES_ROOT,\n                         r\"\")\n# all fucked up.\n    # 获取该键的所有键值，遍历枚举\n    try:\n        i = 0\n        while 1:\n            # EnumKey用来枚举子键，EnumValue方法用来枚举键值，\n            ret = winreg.EnumKey(key, i)\n            # print(ret)\n            deadCode.append(ret if type(ret) == str else str(ret))\n            # is it str?\n            # print(repr(name),value)\n            # return value\n            i += 1\n    except WindowsError:\n        # print('error')\n        return deadCode\n    return deadCode\nif __name__ == '__main__':\n    o = obtain()\n    storeXList(o, \"shrink\")\n    print(o[0], o[-1],len(o))\n# works like fuck.\n# we only get the interested part.\n# what the fuck?\n# now we are gonna check items.\n# quantum mechanics?",
+        "type": "code",
+        "location": "/shrink.py:1-41"
+    },
+    "15": {
+        "file_id": 3,
+        "content": "The code appears to be attempting to enumerate all subkeys under HKEY_CLASSES_ROOT in the Windows registry. It uses the `winreg` module and stores the results in a list, which is then passed to the `storeXList` function for further processing. The code also includes debugging prints and error handling for potential issues during enumeration. However, there are several comments expressing frustration or confusion, suggesting that the code may not be functioning as intended or expected.",
+        "type": "comment"
+    },
+    "16": {
+        "file_id": 4,
+        "content": "/storeADill.py",
+        "type": "filepath"
+    },
+    "17": {
+        "file_id": 4,
+        "content": "storeAList function dumps and stores a list in a file named \"newFuckingDill.dill\" using Dill's pickle module, while storeXList function does the same but allows specifying the output filename.",
+        "type": "summary"
+    },
+    "18": {
+        "file_id": 4,
+        "content": "import dill as pickle\ndef storeAList(a):\n    pickle.dump(a, open(\"newFuckingDill.dill\",\"wb\"))\ndef storeXList(a,b):\n    pickle.dump(a, open(b+\".dill\",\"wb\"))",
+        "type": "code",
+        "location": "/storeADill.py:1-5"
+    },
+    "19": {
+        "file_id": 4,
+        "content": "storeAList function dumps and stores a list in a file named \"newFuckingDill.dill\" using Dill's pickle module, while storeXList function does the same but allows specifying the output filename.",
+        "type": "comment"
+    },
+    "20": {
+        "file_id": 5,
+        "content": "/theRead.py",
+        "type": "filepath"
+    },
+    "21": {
+        "file_id": 5,
+        "content": "The code imports functions for getting and storing data from Dill, retrieves a list of items containing 'shrink', filters out only items with 'Application', and stores the filtered list in Dill as 'apps'. The code also mentions that Audacity is scriptable, and suggests that having all needed features in your programming language is crucial.",
+        "type": "summary"
+    },
+    "22": {
+        "file_id": 5,
+        "content": "from getFromDill import returnXList\nfrom storeADill import storeXList\nr = returnXList(\"shrink\")\nr0 = [x for x in r if \"Application\" in x]\n# print(r0)\nstoreXList(r0,\"apps\")\n# audacity is scriptable.\n# but the most important thing, is that your programming language can give everything that you need.\n# what will you do then?",
+        "type": "code",
+        "location": "/theRead.py:1-9"
+    },
+    "23": {
+        "file_id": 5,
+        "content": "The code imports functions for getting and storing data from Dill, retrieves a list of items containing 'shrink', filters out only items with 'Application', and stores the filtered list in Dill as 'apps'. The code also mentions that Audacity is scriptable, and suggests that having all needed features in your programming language is crucial.",
+        "type": "comment"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "storeAList function dumps and stores a list in a file named \"newFuckingDill.dill\" using Dill's pickle module, while storeXList function does the same but allows specifying the output filename.",
+    "details": [
+        {
+            "comment": "storeAList function dumps and stores a list in a file named \"newFuckingDill.dill\" using Dill's pickle module, while storeXList function does the same but allows specifying the output filename.",
+            "location": "\"/media/root/Prima/works/generated_docs/autowork_doc/src/storeADill.py\":0-4",
+            "content": "import dill as pickle\ndef storeAList(a):\n    pickle.dump(a, open(\"newFuckingDill.dill\",\"wb\"))\ndef storeXList(a,b):\n    pickle.dump(a, open(b+\".dill\",\"wb\"))"
+        }
+    ]
+}

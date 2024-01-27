@@ -1,0 +1,10 @@
+{
+    "summary": "The code imports functions for getting and storing data from Dill, retrieves a list of items containing 'shrink', filters out only items with 'Application', and stores the filtered list in Dill as 'apps'. The code also mentions that Audacity is scriptable, and suggests that having all needed features in your programming language is crucial.",
+    "details": [
+        {
+            "comment": "The code imports functions for getting and storing data from Dill, retrieves a list of items containing 'shrink', filters out only items with 'Application', and stores the filtered list in Dill as 'apps'. The code also mentions that Audacity is scriptable, and suggests that having all needed features in your programming language is crucial.",
+            "location": "\"/media/root/Prima/works/generated_docs/autowork_doc/src/theRead.py\":0-8",
+            "content": "from getFromDill import returnXList\nfrom storeADill import storeXList\nr = returnXList(\"shrink\")\nr0 = [x for x in r if \"Application\" in x]\n# print(r0)\nstoreXList(r0,\"apps\")\n# audacity is scriptable.\n# but the most important thing, is that your programming language can give everything that you need.\n# what will you do then?"
+        }
+    ]
+}

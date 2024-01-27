@@ -1,0 +1,40 @@
+{
+    "url": {
+        "full": "https://gitee.com/x00e0d991e368/autoWork",
+        "partial": "/x00e0d991e368/autoWork"
+    },
+    "file_mapping": {
+        "0": {
+            "filepath": "/README",
+            "entry_id": 0,
+            "language_id": "plain-text"
+        },
+        "1": {
+            "filepath": "/exp0.py",
+            "entry_id": 4,
+            "language_id": "python"
+        },
+        "2": {
+            "filepath": "/getFromDill.py",
+            "entry_id": 8,
+            "language_id": "python"
+        },
+        "3": {
+            "filepath": "/shrink.py",
+            "entry_id": 12,
+            "language_id": "python"
+        },
+        "4": {
+            "filepath": "/storeADill.py",
+            "entry_id": 16,
+            "language_id": "python"
+        },
+        "5": {
+            "filepath": "/theRead.py",
+            "entry_id": 20,
+            "language_id": "python"
+        }
+    },
+    "project_name": "autoWork",
+    "split_count": 1
+}
